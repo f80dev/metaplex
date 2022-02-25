@@ -15,7 +15,7 @@ import BN from 'bn.js';
 import { SafetyDepositInstructionTemplate } from './addTokensToVault';
 
 const BATCH_SIZE = 4;
-// Printing tokens are minted on the fly as needed. We need to pre-mint them to give to the vault
+// Printing assets are minted on the fly as needed. We need to pre-mint them to give to the vault
 // for all relevant NFTs.
 export async function deprecatedPopulatePrintingTokens(
   connection: Connection,

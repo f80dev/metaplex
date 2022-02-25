@@ -204,7 +204,7 @@ programCommand('sell')
   )
   .option('-b, --buy-price <string>', 'Price you wish to sell for')
   .option('-m, --mint <string>', 'Mint of the token to purchase')
-  .option('-t, --token-size <string>', 'Amount of tokens you want to sell')
+  .option('-t, --token-size <string>', 'Amount of assets you want to sell')
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
   .action(async (directory, cmd) => {
     const {
@@ -522,7 +522,7 @@ programCommand('cancel')
   )
   .option('-b, --buy-price <string>', 'Price you wish to sell for')
   .option('-m, --mint <string>', 'Mint of the token to purchase')
-  .option('-t, --token-size <string>', 'Amount of tokens you want to sell')
+  .option('-t, --token-size <string>', 'Amount of assets you want to sell')
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
   .action(async (directory, cmd) => {
     const {
@@ -655,7 +655,7 @@ programCommand('execute_sale')
   )
   .option('-b, --buy-price <string>', 'Price you wish to sell for')
   .option('-m, --mint <string>', 'Mint of the token to purchase')
-  .option('-t, --token-size <string>', 'Amount of tokens you want to sell')
+  .option('-t, --token-size <string>', 'Amount of assets you want to sell')
   .option('-bw, --buyer-wallet <string>', 'Buyer wallet')
   .option('-sw, --seller-wallet <string>', 'Buyer wallet')
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
@@ -885,7 +885,7 @@ programCommand('buy')
     '-ta, --token-account <string>',
     'Token account of the token to purchase - defaults to finding the one with highest balance (for NFTs)',
   )
-  .option('-t, --token-size <string>', 'Amount of tokens you want to purchase')
+  .option('-t, --token-size <string>', 'Amount of assets you want to purchase')
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
   .action(async (directory, cmd) => {
     const {

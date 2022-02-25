@@ -332,7 +332,7 @@ pub struct SafetyDepositBox {
     pub vault: Pubkey,
     /// This particular token's mint
     pub token_mint: Pubkey,
-    /// Account that stores the tokens under management
+    /// Account that stores the assets under management
     pub store: Pubkey,
     /// the order in the array of registries
     pub order: u8,
@@ -661,7 +661,7 @@ pub struct AuctionManagerState {
 #[derive(Clone, BorshSerialize, BorshDeserialize, Debug)]
 pub struct AuctionManagerSettings {
     /// The safety deposit box index in the vault containing the winning items, in order of place
-    /// The same index can appear multiple times if that index contains n tokens for n appearances (this will be checked)
+    /// The same index can appear multiple times if that index contains n assets for n appearances (this will be checked)
     pub winning_configs: Vec<WinningConfig>,
 
     /// The participation config is separated because it is structurally a bit different,
@@ -685,7 +685,7 @@ pub struct ParticipationState {
 
     pub validated: bool,
 
-    /// An account for printing authorization tokens that are made with the one time use token
+    /// An account for printing authorization assets that are made with the one time use token
     /// after the auction ends. Provided during validation step.
     pub printing_authorization_token_account: Option<Pubkey>,
 }
@@ -743,10 +743,10 @@ pub enum WinningConfigType {
     /// metadata, though it confers no rights or privileges of any kind.
     TokenOnlyTransfer,
     /// Means you are auctioning off the master edition record and it's metadata ownership as well as the
-    /// token itself. The other person will be able to mint authorization tokens and make changes to the
+    /// token itself. The other person will be able to mint authorization assets and make changes to the
     /// artwork.
     FullRightsTransfer,
-    /// Means you are using authorization tokens to print off editions during the auction using
+    /// Means you are using authorization assets to print off editions during the auction using
     /// from a MasterEditionV1
     PrintingV1,
     /// Means you are using the MasterEditionV2 to print off editions

@@ -251,7 +251,7 @@ if [ -z ${CHANGE+x} ]; then
     fi
 fi
 
-# Mint multiple tokens
+# Mint multiple assets
 
 if [ -z ${MULTIPLE+x} ]; then
     echo ""

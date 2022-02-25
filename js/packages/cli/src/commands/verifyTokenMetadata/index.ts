@@ -184,7 +184,7 @@ The \`metaplex upload\` command will automatically substitute this URL with the 
 };
 
 export const verifyConsistentShares = (collatedCreators: CollatedCreators) => {
-  // We expect all creators to have been added to the same amount of tokens
+  // We expect all creators to have been added to the same amount of assets
   const tokenCountSet = new Set<number>();
   for (const [address, collation] of collatedCreators.entries()) {
     tokenCountSet.add(collation.tokenCount);

@@ -709,7 +709,7 @@ export async function getTokenAmount(
       log.info(
         'Account ',
         account.toBase58(),
-        'didnt return value. Assuming 0 tokens.',
+        'didnt return value. Assuming 0 assets.',
       );
     }
   } else {

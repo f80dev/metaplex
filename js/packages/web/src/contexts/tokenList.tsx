@@ -3,10 +3,10 @@ import { useConnectionConfig } from '@oyster/common';
 import { TokenInfo, TokenListContainer } from '@solana/spl-token-registry';
 import { WRAPPED_SOL_MINT } from '@project-serum/serum/lib/token-instructions';
 
-// Tag in the spl-token-registry for sollet wrapped tokens.
+// Tag in the spl-token-registry for sollet wrapped assets.
 export const SPL_REGISTRY_SOLLET_TAG = 'wrapped-sollet';
 
-// Tag in the spl-token-registry for wormhole wrapped tokens.
+// Tag in the spl-token-registry for wormhole wrapped assets.
 export const SPL_REGISTRY_WORM_TAG = 'wormhole';
 
 export interface TokenListContextState {
@@ -71,7 +71,7 @@ export function SPLTokenListProvider({
     return tokens;
   }, [tokenList, tokenMap]);
 
-  // Sollet wrapped tokens.
+  // Sollet wrapped assets.
   const [swappableTokensSollet, solletMap] = useMemo(() => {
     const tokens = subscribedTokens.filter((t: TokenInfo) => {
       const isSollet = t.tags?.includes(SPL_REGISTRY_SOLLET_TAG);
@@ -86,7 +86,7 @@ export function SPLTokenListProvider({
     ];
   }, [tokenList]);
 
-  // Wormhole wrapped tokens.
+  // Wormhole wrapped assets.
   const [swappableTokensWormhole, wormholeMap] = useMemo(() => {
     const tokens = subscribedTokens.filter((t: TokenInfo) => {
       const isSollet = t.tags?.includes(SPL_REGISTRY_WORM_TAG);

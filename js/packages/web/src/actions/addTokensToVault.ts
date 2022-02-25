@@ -31,7 +31,7 @@ export interface SafetyDepositInstructionTemplate {
 }
 
 const BATCH_SIZE = 1;
-// This command batches out adding tokens to a vault using a prefilled payer account, and then activates and combines
+// This command batches out adding assets to a vault using a prefilled payer account, and then activates and combines
 // the vault for use. It issues a series of transaction instructions and signers for the sendTransactions batch.
 export async function addTokensToVault(
   connection: Connection,

@@ -89,7 +89,7 @@ export class SafetyDepositBox {
   vault: StringPublicKey;
   /// This particular token's mint
   tokenMint: StringPublicKey;
-  /// Account that stores the tokens under management
+  /// Account that stores the assets under management
   store: StringPublicKey;
   /// the order in the array of registries
   order: number;

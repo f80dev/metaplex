@@ -508,10 +508,10 @@ export enum WinningConfigType {
   /// metadata, though it confers no rights or privileges of any kind.
   TokenOnlyTransfer,
   /// Means you are auctioning off the master edition record and it's metadata ownership as well as the
-  /// token itself. The other person will be able to mint authorization tokens and make changes to the
+  /// token itself. The other person will be able to mint authorization assets and make changes to the
   /// artwork.
   FullRightsTransfer,
-  /// Means you are using authorization tokens to print off editions during the auction using
+  /// Means you are using authorization assets to print off editions during the auction using
   /// from a MasterEditionV1
   PrintingV1,
   /// Means you are using the MasterEditionV2 to print off editions

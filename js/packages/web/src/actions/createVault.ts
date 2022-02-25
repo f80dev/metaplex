@@ -23,7 +23,7 @@ import { AccountLayout, MintLayout } from '@solana/spl-token';
 import { WalletNotConnectedError } from '@solana/wallet-adapter-base';
 
 // This command creates the external pricing oracle a vault
-// This gets the vault ready for adding the tokens.
+// This gets the vault ready for adding the assets.
 export async function createVault(
   connection: Connection,
   wallet: WalletSigner,

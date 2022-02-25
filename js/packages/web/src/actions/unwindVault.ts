@@ -20,7 +20,7 @@ import { WalletNotConnectedError } from '@solana/wallet-adapter-base';
 
 const BATCH_SIZE = 1;
 
-// Given a vault you own, unwind all the tokens out of it.
+// Given a vault you own, unwind all the assets out of it.
 export async function unwindVault(
   connection: Connection,
   wallet: WalletSigner,
@@ -47,7 +47,7 @@ export async function unwindVault(
     );
     if (epa) {
       const decoded = decodeExternalPriceAccount(epa.data);
-      // "Closing" it here actually brings it to Combined state which means we can withdraw tokens.
+      // "Closing" it here actually brings it to Combined state which means we can withdraw assets.
       const { instructions: cvInstructions, signers: cvSigners } =
         await closeVault(
           connection,

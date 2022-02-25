@@ -116,7 +116,7 @@ programCommand('update_config_account')
 
     if (storage === StorageType.ArweaveBundle && env !== 'mainnet-beta') {
       throw new Error(
-        'The arweave-bundle storage option only works on mainnet because it requires spending real AR tokens. For devnet, please set the --storage option to "aws" or "ipfs"\n',
+        'The arweave-bundle storage option only works on mainnet because it requires spending real AR assets. For devnet, please set the --storage option to "aws" or "ipfs"\n',
       );
     }
 
@@ -760,7 +760,7 @@ programCommand('mint_one_token')
   });
 
 programCommand('mint_multiple_tokens')
-  .requiredOption('-n, --number <string>', 'Number of tokens')
+  .requiredOption('-n, --number <string>', 'Number of assets')
   .option(
     '-r, --rpc-url <string>',
     'custom rpc url since this is a heavy command',

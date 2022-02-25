@@ -63,7 +63,7 @@ program
   )
   .option(
     '-atc, --anti-rug-token-requirement <string>',
-    'optional anti-rug token requirement when reserve opens - 100 means 100 tokens remaining out of total supply',
+    'optional anti-rug token requirement when reserve opens - 100 means 100 assets remaining out of total supply',
   )
   .option(
     '-sd, --self-destruct-date <string>',
@@ -83,7 +83,7 @@ program
   )
   .option('-ld, --lottery-duration <string>', 'seconds eg 86400')
   .option('-ts, --tick-size <string>', 'tick size', '0.1')
-  .option('-n, --number-of-tokens <number>', 'Number of tokens to sell')
+  .option('-n, --number-of-assets <number>', 'Number of assets to sell')
   .option(
     '-mint, --treasury-mint <string>',
     'token mint to take as payment instead of sol',
@@ -248,7 +248,7 @@ program
   )
   .option(
     '-atc, --anti-rug-token-requirement <string>',
-    'optional anti-rug token requirement when reserve opens - 100 means 100 tokens remaining out of total supply',
+    'optional anti-rug token requirement when reserve opens - 100 means 100 assets remaining out of total supply',
   )
   .option(
     '-sd, --self-destruct-date <string>',
@@ -268,7 +268,7 @@ program
     'timestamp - eg "04 Dec 1995 00:12:00 GMT"',
   )
   .option('-ts, --tick-size <string>', 'tick size', '0.1')
-  .option('-n, --number-of-tokens <number>', 'Number of tokens to sell')
+  .option('-n, --number-of-assets <number>', 'Number of assets to sell')
   .option(
     '-mint, --token-mint <string>',
     'token mint to take as payment instead of sol',
@@ -2046,11 +2046,11 @@ program
 
   .option(
     '-ut, --upper-tolerance <string>',
-    'if a wallet has more than tolerance tokens going to it(>), skip the wallet (assuming a secondary)',
+    'if a wallet has more than tolerance assets going to it(>), skip the wallet (assuming a secondary)',
   )
   .option(
     '-lt, --lower-tolerance <string>',
-    'if a wallet has less than tolerance tokens going to it(<)',
+    'if a wallet has less than tolerance assets going to it(<)',
   )
   .option(
     '-r, --rpc-url <string>',
@@ -2920,7 +2920,7 @@ program
       console.log('Reserve bps', fairLaunchObj.data.antiRugSetting.reserveBp);
       //@ts-ignore
       console.log(
-        'Number of tokens remaining in circulation below which you are allowed to retrieve treasury in full:',
+        'Number of assets remaining in circulation below which you are allowed to retrieve treasury in full:',
         //@ts-ignore
         fairLaunchObj.data.antiRugSetting.tokenRequirement.toNumber(),
       );

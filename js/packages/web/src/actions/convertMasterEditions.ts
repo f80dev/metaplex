@@ -123,7 +123,7 @@ export async function filterMetadata(
 
   return { available, unavailable };
 }
-// Given a vault you own, unwind all the tokens out of it.
+// Given a vault you own, unwind all the assets out of it.
 export async function convertMasterEditions(
   connection: Connection,
   wallet: WalletSigner,
